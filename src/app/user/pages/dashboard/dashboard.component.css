@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.col-12{
+    padding: 120px;
+    background-color:#2c669a;
+}
+.col-12 a{
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+h1{
+    font-size: 62px;
+    color: white;
+    padding-bottom: 40px;
+}
+h3{
+    padding-bottom: 1.75em;
+    color: white;
+}
+.btn{
+    background-color: #ff6900;
+}
+.elementor-button-text{
+    padding-left: 50px;
+    color: white;
+    display: inline-block;
+}
+.col-2{
+    margin: auto;
+    padding: 15px;
+}
+.logo{
+    padding-left: 200px;
+    padding-right: 200px;
+    margin: 70px;
+}
+
+.sec-1{
+  padding-left: 150px;
+}
+h2{
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: 'Poppins',sans-serif;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+h6{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+    padding: 10px;
+}
+.col-6 a{
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    padding: 10px;
+    padding-bottom: 50px;
+}
+.info{
+    border-left: solid 3px orange;
+    float: left;
+    color: black;
+    font-weight: 600;
+    padding: 50px;
+}
+.card-title{
+    color: #0A083B;
+    font-family: "Poppins", Sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.45em;
+}
+.my-card{
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border: none;
+}
+.card a{
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+.card{
+    height: 330px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+h4{
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Poppins',sans-serif;
+    margin-bottom: 20px;
+    padding-left: 150px;
+}
+.cl-info{
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    line-height: 30px;
+    padding-left: 150px;
+    margin-bottom: 100px;
+}
+.enquiry{
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'Poppins',sans-serif;
+}
+.form-control{
+    padding: 7px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+.form-group{
+    padding: 10px;
+    padding-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.btn-2{
+    background-color: #0652DD;
+    width: 90%;
+    color: white;
+    margin: 15px;
+    height: 40px;
+    margin-top: 30px;
+    margin-left: 35px;
+    font-weight: 700;
+}
