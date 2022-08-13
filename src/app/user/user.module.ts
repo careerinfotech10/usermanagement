@@ -5,19 +5,27 @@ import { RegristrationComponent } from './pages/regristration/regristration.comp
 import { UnlockComponent } from './pages/unlock/unlock.component';
 import { ForgotpwdComponent } from './pages/forgotpwd/forgotpwd.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserserviceService } from './userservice.service';
+import{HttpClientModule} from '@angular/common/http'
 
 
 @NgModule({
   declarations: [LoginComponent, RegristrationComponent, UnlockComponent, ForgotpwdComponent, DashboardComponent],
   imports: [
-    CommonModule
+    HttpClientModule,
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports:[
     LoginComponent,
     RegristrationComponent,
     ForgotpwdComponent,
-    UnlockComponent
+    UnlockComponent,
+  ],
+  providers:[
+    UserserviceService
   ]
 })
 export class UserModule { }

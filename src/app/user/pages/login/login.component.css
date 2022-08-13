@@ -26,6 +26,11 @@ h3 {
 h4{
     color: #84817a;
 }
+.status{
+    font-size: 20px;
+    font-weight: 600;
+}
+
 .btn{
     width: 100%;
     background-color: #706fd3;
