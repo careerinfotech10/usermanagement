@@ -1,5 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UserserviceService } from '../../userservice.service';
 
 @Component({
   selector: 'app-regristration',
@@ -8,28 +11,41 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class RegristrationComponent implements OnInit {
 
+  userStatus: any;
+  userLogin: boolean = false;
   registerForm: FormGroup
-  constructor() { }
+  constructor(private userservice: UserserviceService, private route: Router) { }
 
   ngOnInit(): void {
     this.registerForm = new FormGroup({
-      'name': new FormControl('',
+      'cityId': new FormControl('',
+        [Validators.required]),
+      'countryId': new FormControl('',
+        [Validators.required]),
+      'fname': new FormControl('',
         [Validators.required,
         Validators.minLength(3)]),
-      'email2': new FormControl('',
+      'lname': new FormControl('',
         [Validators.required,
         Validators.minLength(3)]),
-      'password': new FormControl('',
+      'email': new FormControl('',
         [Validators.required,
-          Validators.minLength(6)]),
-      'confirmPwd': new FormControl('',
+        Validators.minLength(4)]),
+      'gender': new FormControl('',
+        [Validators.required]),
+      'dob': new FormControl('',
+        [Validators.required]),
+      'phno': new FormControl('',
         [Validators.required,
-        Validators.minLength(6)])
+        Validators.minLength(10)]),
+      'stateId': new FormControl('',
+        [Validators.required]),
     })
   }
 
-  submitregisterDetails(){
-    console.log(this.registerForm.value);
+  submitRegisterDetails(){
+    
   }
 
+ 
 }

@@ -10,34 +10,39 @@ import { UserserviceService } from '../../userservice.service';
 })
 export class LoginComponent implements OnInit {
 
-  userdata:any;
-  loginForm:FormGroup
-  constructor(private userservice:UserserviceService,private route:Router) { }
+  userdata: any;
+  userLogin: boolean = false;
+  loginForm: FormGroup
+  constructor(private userservice: UserserviceService, private route: Router) { }
 
   ngOnInit(): void {
-    this.loginForm=new FormGroup({
-      'email':new FormControl('',[Validators.required,
+    this.loginForm = new FormGroup({
+      'email': new FormControl('', [Validators.required,
       Validators.minLength(3)]),
-      'pwd':new FormControl('',[
+      'pwd': new FormControl('', [
         Validators.required,
-       Validators.minLength(6)
+        Validators.minLength(6)
       ])
     })
     this.submitloginForm();
   }
 
   //login form//
+
   submitloginForm(){
     this.userservice.userloginData(this.loginForm.value).subscribe((data:any)=>{
       if(data==='SUCCESS'){
+        this.loginForm.reset();
          this.userdata='Login Successfully';
+         this.userLogin=true;
         setTimeout(() => {
           this.route.navigate(['']);
-        }, 3000);
+        }, 800);
       }
-      else{
+      else{ 
         this.userdata='Invalid Credentials';
       }
+      
     },
     error=>{
       console.log(error);

@@ -8,27 +8,63 @@
         <h3 class=" text-center">CI Institute</h3>
         <h4 class="p-1 text-center"> Student Register</h4>
         <div class="mb-3 form-group">
-          <label for="exampleInputEmail1" class="form-label">Full Name</label>
-          <input type="name" class="form-control" id="name" formControlName="name">
-          <small *ngIf="registerForm.get('name').invalid" class="text-danger">Enter your full name</small>
+          <label for="exampleInputcityid" class="form-label">City</label><br>
+          <select name="cityid" id="cityid" formControlName="cityId" style="width: 100%;">
+            <option value="1">Vizag</option>
+            <option value="2">Guntur</option>
+            <option value="3">Banglore</option>
+            <option value="4">Mysore</option>
+          </select>
+          <small *ngIf="registerForm.get('cityId').invalid && registerForm.get('cityId').touched" class="text-danger">Please enter your City Id</small>
+        </div>
+        <div class="mb-3 form-group">
+          <label for="exampleInputCountryId" class="form-label">Country </label><br>
+          <select name="cityid" id="cityid" formControlName="countryId" style="width: 100%;">
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+          <small *ngIf="registerForm.get('countryId').invalid && registerForm.get('countryId').touched" class="text-danger">Please enter your Country Id</small>
+        </div>
+        <div class="mb-3 form-group">
+          <label for="exampleInputfirstName" class="form-label">First Name</label>
+          <input type="name" class="form-control" id="name" formControlName="fname">
+          <small *ngIf="registerForm.get('fname').invalid && registerForm.get('fname').touched" class="text-danger">Enter your first name</small>
+        </div>
+        <div class="mb-3 form-group">
+          <label for="exampleInputlastName" class="form-label">Last Name</label>
+          <input type="name" class="form-control" id="name" formControlName="lname">
+          <small *ngIf="registerForm.get('lname').invalid && registerForm.get('lname').touched" class="text-danger">Enter your last name</small>
         </div>
         <div class="mb-3 form-group">
           <label for="exampleInputEmail1" class="form-label" >Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email2">
-          <small *ngIf="registerForm.get('email2').invalid" class="text-danger">Enter your email address</small>
+          <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email">
+          <small *ngIf="registerForm.get('email').invalid && registerForm.get('email').touched" class="text-danger">Enter your email address</small>
         </div>
         <div class="mb-3 form-group">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="InputPassword1" formControlName="password">
-          <small *ngIf="registerForm.get('password').invalid" class="text-danger">Password contains at least six characters</small>
+          <label for="exampleInputPassword1" class="form-label">Gender</label><br>
+          <input type="radio" name="gender" value="male" formControlName="gender"> Male <input type="radio" name="gender" value="female" formControlName="gender"> Female
+          <small *ngIf="registerForm.get('gender').invalid && registerForm.get('gender').touched " class="text-danger">Please enter your Gender</small>
         </div>
         <div class="mb-3 form-group">
-          <label for="exampleInputPassword1" class="form-label"> Confirm Password</label>
-          <input type="password" class="form-control" id="InputPassword2" formControlName="confirmPwd">
-          <small *ngIf="registerForm.get('confirmPwd').invalid" class="text-danger">Please confirm your Password</small>
+          <label for="exampleInputPassword1" class="form-label"> Date of birth</label>
+          <input type="date" class="form-control" id="dateofBirth" formControlName="dob">
+          <small *ngIf="registerForm.get('dob').invalid && registerForm.get('dob').touched" class="text-danger">Please enter a valid date of birth</small>
         </div>
         <div class="mb-3 form-group">
-          <button type="submit" class="btn" (click)="submitregisterDetails()" [disabled]="!registerForm.valid">Submit</button>
+          <label for="exampleInputPassword1" class="form-label">Phone No.</label>
+          <input type="text" class="form-control" id="InputPassword1" formControlName="phno">
+          <small *ngIf="registerForm.get('phno').invalid && registerForm.get('phno').touched" class="text-danger">Please enter your phone number</small>
+        </div>
+        <div class="mb-3 form-group">
+          <label for="exampleInputPassword1" class="form-label">State Id</label>
+          <select name="state3id" id="stateid" formControlName="stateId" style="width: 100%;">
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+          <small *ngIf="registerForm.get('stateId').invalid && registerForm.get('stateId').touched" class="text-danger">Please enter your State Id</small>
+        </div>
+        <div class="mb-3 form-group">
+          <button type="submit" class="btn" (click)="submitRegisterDetails()" [disabled]="!registerForm.valid">Submit</button>
         </div><br>
         <span class="m-5 not">Already a member<a href="" routerLink="login"> Login Here</a></span>
       </form>
